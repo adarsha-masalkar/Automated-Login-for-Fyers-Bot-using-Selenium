@@ -7,6 +7,7 @@ import time
 def main():
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    options.add_experimental_option("detach", True)
     options.add_argument("--incognito")
 
     client_id = 'Client Id'
