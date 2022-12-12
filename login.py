@@ -9,13 +9,15 @@ def main():
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
     options.add_experimental_option("detach", True)
     options.add_argument("--incognito")
-
+    
+    # Enter the following details     
     client_id = 'Client Id'
     password = 'yourpassword'
     pin = '1234'
 
     redirect_uri = 'https://old-login.fyers.in/'
-
+    
+    #Enter the absolute path to chrome webdriver as raw string
     service = Service("Path to Chrome Webdriver")
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(redirect_uri)
